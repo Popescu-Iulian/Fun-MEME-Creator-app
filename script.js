@@ -1,6 +1,7 @@
 // USER UPPER/LEFT VARIABLES
 const USER_UPPER_TEXT = document.querySelector('#user-upper-text');
 const ADD_UPPER_TEXT_BTN = document.querySelector('[onclick="addUpperText()"]');
+const USER_UPPER_FONT_FAMILY = document.querySelector('#user-upper-font-family');
 const USER_UPPER_FONT_SIZE = document.querySelector('#user-upper-font-size');
 const USER_UPPER_TEXT_COLOR = document.querySelector('#user-upper-text-color');
 const USER_UPPER_RESET_BTN = document.querySelector('#user-upper-reset-btn');
@@ -14,6 +15,7 @@ const LOWER_TEXT_SPAN = document.querySelector('#lower-text-span');
 // USER LOWER/RIGHT VARIABLES
 const USER_LOWER_TEXT = document.querySelector('#user-lower-text');
 const ADD_LOWER_TEXT_BTN = document.querySelector('[onclick="addLowerText()"]');
+const USER_LOWER_FONT_FAMILY = document.querySelector('#user-lower-font-family');
 const USER_LOWER_FONT_SIZE = document.querySelector('#user-lower-font-size');
 const USER_LOWER_TEXT_COLOR = document.querySelector('#user-lower-text-color');
 const USER_LOWER_RESET_BTN = document.querySelector('#user-lower-reset-btn');
@@ -29,10 +31,10 @@ function editUpperText() {
   USER_UPPER_TEXT.value = UPPER_TEXT_SPAN.textContent;
 }
 
-function selectedUpperFontFamily(idx) {
-  if (idx == 1) UPPER_TEXT_SPAN.style.fontFamily = '"Arial", sans-serif';
-  if (idx == 2) UPPER_TEXT_SPAN.style.fontFamily = '"Comic Sans MS", sans-serif';
-  if (idx == 3) UPPER_TEXT_SPAN.style.fontFamily = '"Pacifico", cursive';
+function selectedUpperFontFamily() {
+  if (USER_UPPER_FONT_FAMILY.value === 'arial') UPPER_TEXT_SPAN.style.fontFamily = '"Arial", sans-serif';
+  if (USER_UPPER_FONT_FAMILY.value === 'comic sans') UPPER_TEXT_SPAN.style.fontFamily = '"Comic Sans MS", sans-serif';
+  if (USER_UPPER_FONT_FAMILY.value === 'pacifico') UPPER_TEXT_SPAN.style.fontFamily = '"Pacifico", cursive';
 }
 
 function setUpperFontSize() {
@@ -51,6 +53,7 @@ function resetUpperSettings(event) {
   UPPER_TEXT_SPAN.style.color = 'initial';
   USER_UPPER_TEXT_COLOR.value = 'initial';
   USER_UPPER_FONT_SIZE.value = 'initial';
+  USER_UPPER_FONT_FAMILY.value = 'initial';
   // location.reload();
 }
 
@@ -69,18 +72,10 @@ function editLowerText() {
   USER_LOWER_TEXT.value = LOWER_TEXT_SPAN.textContent;
 }
 
-function selectedLowerFontFamily(idx) {
-  switch (idx) {
-    case 1:
-      LOWER_TEXT_SPAN.style.fontFamily = '"Arial", sans-serif';
-      break;
-    case 2:
-      LOWER_TEXT_SPAN.style.fontFamily = '"Comic Sans MS", sans-serif';
-      break;
-    case 3:
-      LOWER_TEXT_SPAN.style.fontFamily = '"Pacifico", cursive';
-      break;
-  }
+function selectedLowerFontFamily() {
+  if (USER_LOWER_FONT_FAMILY.value === 'arial') LOWER_TEXT_SPAN.style.fontFamily = '"Arial", sans-serif';
+  if (USER_LOWER_FONT_FAMILY.value === 'comic sans') LOWER_TEXT_SPAN.style.fontFamily = '"Comic Sans MS", sans-serif';
+  if (USER_LOWER_FONT_FAMILY.value === 'pacifico') LOWER_TEXT_SPAN.style.fontFamily = '"Pacifico", cursive';
 }
 
 function setLowerFontSize() {
@@ -98,6 +93,7 @@ function resetLowerSettings() {
   // document.querySelector('[name="user-lower-font-family"]').checked = false; -- va da mereu pe primul din lista; poate facem un for pe undeva -- ramane de gandit si rezolvat
   LOWER_TEXT_SPAN.style.color = 'initial';
   USER_LOWER_TEXT_COLOR.value = 'initial';
+  USER_LOWER_FONT_FAMILY.value = 'initial';
   USER_LOWER_FONT_SIZE.value = 'initial';
   // location.reload();
 }
