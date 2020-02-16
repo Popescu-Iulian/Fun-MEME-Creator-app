@@ -1,5 +1,6 @@
 // USER UPPER/LEFT VARIABLES
 const USER_UPPER_TEXT = document.querySelector('#user-upper-text');
+const ADD_UPPER_TEXT_BTN = document.querySelector('[onclick="addUpperText()"]');
 const USER_UPPER_FONT_SIZE = document.querySelector('#user-upper-font-size');
 const USER_UPPER_TEXT_COLOR = document.querySelector('#user-upper-text-color');
 const USER_UPPER_RESET_BTN = document.querySelector('#user-upper-reset-btn');
@@ -12,6 +13,7 @@ const LOWER_TEXT_SPAN = document.querySelector('#lower-text-span');
 
 // USER LOWER/RIGHT VARIABLES
 const USER_LOWER_TEXT = document.querySelector('#user-lower-text');
+const ADD_LOWER_TEXT_BTN = document.querySelector('[onclick="addLowerText()"]');
 const USER_LOWER_FONT_SIZE = document.querySelector('#user-lower-font-size');
 const USER_LOWER_TEXT_COLOR = document.querySelector('#user-lower-text-color');
 const USER_LOWER_RESET_BTN = document.querySelector('#user-lower-reset-btn');
@@ -19,10 +21,11 @@ const USER_LOWER_RESET_BTN = document.querySelector('#user-lower-reset-btn');
 
 // USER UPPER/LEFT FUNCTIONS
 function addUpperText() {
-  return USER_UPPER_TEXT.value.length === 0 ? alert('Please enter an upper text for your fantastic meme') : UPPER_TEXT_SPAN.textContent = USER_UPPER_TEXT.value, USER_UPPER_TEXT.value = '';
+  return USER_UPPER_TEXT.value.length === 0 ? alert('Please enter an upper text for your fantastic meme') : UPPER_TEXT_SPAN.textContent = USER_UPPER_TEXT.value, USER_UPPER_TEXT.value = '', ADD_UPPER_TEXT_BTN.textContent = 'Add';
 }
 
 function editUpperText() {
+  ADD_UPPER_TEXT_BTN.textContent = 'Save';
   USER_UPPER_TEXT.value = UPPER_TEXT_SPAN.textContent;
 }
 
@@ -58,10 +61,11 @@ function addImage() {
 
 // USER LOWER/RIGHT FUNCTIONS
 function addLowerText() {
-  return USER_LOWER_TEXT.value.length === 0 ? alert('Please enter a lower text for your fantastic meme') : LOWER_TEXT_SPAN.textContent = USER_LOWER_TEXT.value, USER_LOWER_TEXT.value = '';
+  return USER_LOWER_TEXT.value.length === 0 ? alert('Please enter a lower text for your fantastic meme') : LOWER_TEXT_SPAN.textContent = USER_LOWER_TEXT.value, USER_LOWER_TEXT.value = '', ADD_LOWER_TEXT_BTN.textContent = 'Add';
 }
 
 function editLowerText() {
+  ADD_LOWER_TEXT_BTN.textContent = 'Save';
   USER_LOWER_TEXT.value = LOWER_TEXT_SPAN.textContent;
 }
 
