@@ -10,7 +10,7 @@
 	<body>
 		<div id="container">
 			<div id="app-title">
-				<h1>FunMEMEinator</h1>
+				<h1>FunMEMEcreator</h1>
 				<h4>Create your own fun memes</h4>
 			</div>
 
@@ -30,30 +30,16 @@
 				</div>
 
 				<div id="upper-font-family">
-					<label
-						><input
-							name="user-upper-font-family"
-							type="radio"
-							onclick="selectedUpperFontFamily(1)"
-						/>
-						Arial</label
+					<label for="user-upper-font-family">Set upper text font type: </label>
+					<select
+						id="user-upper-font-family"
+						oninput="selectedUpperFontFamily()"
 					>
-					<label
-						><input
-							name="user-upper-font-family"
-							type="radio"
-							onclick="selectedUpperFontFamily(2)"
-						/>
-						Comic Sans</label
-					>
-					<label
-						><input
-							name="user-upper-font-family"
-							type="radio"
-							onclick="selectedUpperFontFamily(3)"
-						/>
-						Pacifico</label
-					>
+						<option value="initial">Choose a font</option>
+						<option value="arial">Arial</option>
+						<option value="comic sans">Comic Sans</option>
+						<option value="pacifico">Pacifico</option>
+					</select>
 				</div>
 
 				<div id="upper-font-size">
@@ -123,30 +109,16 @@
 				</div>
 
 				<div id="lower-font-family">
-					<label
-						><input
-							name="user-lower-font-family"
-							type="radio"
-							onclick="selectedLowerFontFamily(1)"
-						/>
-						Arial</label
+					<label for="user-lower-font-family">Set lower text font type: </label>
+					<select
+						id="user-lower-font-family"
+						oninput="selectedLowerFontFamily()"
 					>
-					<label
-						><input
-							name="user-lower-font-family"
-							type="radio"
-							onclick="selectedLowerFontFamily(2)"
-						/>
-						Comic Sans</label
-					>
-					<label
-						><input
-							name="user-lower-font-family"
-							type="radio"
-							onclick="selectedLowerFontFamily(3)"
-						/>
-						Pacifico</label
-					>
+						<option value="initial">Choose a font</option>
+						<option value="arial">Arial</option>
+						<option value="comic sans">Comic Sans</option>
+						<option value="pacifico">Pacifico</option>
+					</select>
 				</div>
 
 				<div id="lower-font-size">
