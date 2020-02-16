@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<title>Meme Generator app</title>
+	</head>
+	<body>
+		<div id="container">
+			<div id="app-title">
+				<h1>FunMEMEinator</h1>
+				<h4>Create your own fun memes</h4>
+			</div>
+
+			<!-- USER UPPER/LEFT SETTINGS -->
+
+			<section id="upper-left-settings">
+				<div id="upper-text-input">
+					<label
+						>Enter upper text:
+						<input
+							id="user-upper-text"
+							type="text"
+							placeholder="your text here..."
+					/></label>
+					<button type="button" onclick="addUpperText()">Add</button>
+					<button type="button" onclick="editUpperText()">Edit</button>
+				</div>
+
+				<div id="upper-font-family">
+					<label
+						><input
+							name="user-upper-font-family"
+							type="radio"
+							onclick="selectedUpperFontFamily(1)"
+						/>
+						Arial</label
+					>
+					<label
+						><input
+							name="user-upper-font-family"
+							type="radio"
+							onclick="selectedUpperFontFamily(2)"
+						/>
+						Comic Sans</label
+					>
+					<label
+						><input
+							name="user-upper-font-family"
+							type="radio"
+							onclick="selectedUpperFontFamily(3)"
+						/>
+						Pacifico</label
+					>
+				</div>
+
+				<div id="upper-font-size">
+					<label
+						>Set upper text font size:
+						<input
+							id="user-upper-font-size"
+							type="range"
+							min="15"
+							max="40"
+							oninput="setUpperFontSize()"
+						/>
+					</label>
+				</div>
+
+				<div id="upper-font-color">
+					<label
+						>Set upper text color:
+						<input
+							id="user-upper-text-color"
+							type="color"
+							oninput="selectedUpperFontColor()"
+					/></label>
+				</div>
+
+				<div id="upper-reset-btn">
+					<button id="user-upper-reset-btn" onclick="resetUpperSettings()">
+						Reset upper settings
+					</button>
+				</div>
+			</section>
+
+			<!-- USER IMAGE INPUT/GENERATOR -->
+
+			<div id="image-settings">
+				<div id="image-url-input">
+					<label
+						>Enter image URL:
+						<input
+							id="user-image-url"
+							type="url"
+							placeholder="example.com/img.jpg"
+					/></label>
+					<button type="button" onclick="addImage()">Add</button>
+				</div>
+
+				<div id="user-image-text">
+					<span id="upper-text-span"></span>
+					<img id="user-meme-image" />
+					<span id="lower-text-span"></span>
+				</div>
+			</div>
+
+			<!-- USER LOWER/RIGHT SETTINGS -->
+
+			<section id="lower-right-settings">
+				<div id="lower-text-input">
+					<label
+						>Enter lower text:
+						<input
+							id="user-lower-text"
+							type="text"
+							placeholder="your text here..."
+					/></label>
+					<button type="button" onclick="addLowerText()">Add</button>
+					<button type="button" onclick="editLowerText()">Edit</button>
+				</div>
+
+				<div id="lower-font-family">
+					<label
+						><input
+							name="user-lower-font-family"
+							type="radio"
+							onclick="selectedLowerFontFamily(1)"
+						/>
+						Arial</label
+					>
+					<label
+						><input
+							name="user-lower-font-family"
+							type="radio"
+							onclick="selectedLowerFontFamily(2)"
+						/>
+						Comic Sans</label
+					>
+					<label
+						><input
+							name="user-lower-font-family"
+							type="radio"
+							onclick="selectedLowerFontFamily(3)"
+						/>
+						Pacifico</label
+					>
+				</div>
+
+				<div id="lower-font-size">
+					<label
+						>Set lower text font size:
+						<input
+							id="user-lower-font-size"
+							type="range"
+							min="15"
+							max="40"
+							oninput="setLowerFontSize()"
+						/>
+					</label>
+				</div>
+
+				<div id="lower-font-color">
+					<label
+						>Set lower text color:
+						<input
+							id="user-lower-text-color"
+							type="color"
+							oninput="selectedLowerFontColor()"
+					/></label>
+				</div>
+
+				<div id="lower-reset-btn">
+					<button id="user-lower-reset-btn" onclick="resetLowerSettings()">
+						Reset lower settings
+					</button>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
