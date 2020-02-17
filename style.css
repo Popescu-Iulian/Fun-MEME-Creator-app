@@ -1,10 +1,5 @@
-/* === GENERAL === */
-@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,500,700&display=swap');
-
-/* font-family: 'Roboto', sans-serif;
-font-family: 'Pacifico', cursive;
-font-family: 'Arial', sans-serif;
-font-family: "Comic Sans MS", sans-serif; */
+/* === GENERAL STYLES === */
+@import url('https://fonts.googleapis.com/css?family=Lato|Pacifico|Sriracha&display=swap');
 
 * {
 	margin: 0;
@@ -12,38 +7,99 @@ font-family: "Comic Sans MS", sans-serif; */
 	box-sizing: border-box;
 }
 
+body {
+	background: url('images/background.png') no-repeat center center fixed;
+	background-size: cover;
+}
+
+div {
+	margin-bottom: 0.2rem;
+}
+
 #container {
-	width: 80%;
+	width: 80vw;
 	height: 100vh;
 	margin: 0 auto;
 	text-align: center;
-	font-family: initial;
+	color: white;
+	overflow: hidden;
 }
 
+/* === MAIN SECTIONS STYLES === */
 #app-title {
-	background-color: lightskyblue;
-	height: 25vh;
+	height: 10vh;
+	font-family: 'Sriracha', cursive;
+	font-size: 1.1rem;
+	padding: 0.5rem 0;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
-#upper-left-settings {
-	background-color: lightpink;
-	height: 25vh;
-}
-
+#upper-left-settings,
+#lower-right-settings,
 #image-settings {
-	background-color: lightgreen;
-	height: 25vh;
+	height: 30vh;
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8rem;
 }
 
-#lower-right-settings {
-	background-color: lightsalmon;
-	height: 25vh;
+/* === BTNs STYLES === */
+#upper-text-input button,
+#lower-text-input button,
+#upper-font-family select,
+#lower-font-family select,
+#upper-reset-btn button,
+#lower-reset-btn button,
+#image-url-input button {
+	font-family: 'Lato', sans-serif;
+	background-color: lightcyan;
+	border: 1px solid blue;
+	border-radius: 5px;
+	padding: 1px 5px;
+	font-size: 0.6rem;
+	outline: none;
 }
 
-img {
-	width: 150px;
+#upper-text-input button,
+#lower-text-input button,
+#image-url-input button {
+	margin: 1px;
 }
 
+/* === INPUTS STYLES === */
+#upper-text-input input,
+#lower-text-input input,
+#image-url-input input {
+	font-family: 'Lato', sans-serif;
+	font-size: 0.6rem;
+	color: black;
+	width: 40%;
+}
+
+#upper-font-color input,
+#lower-font-color input,
+#upper-font-size input,
+#lower-font-size input {
+	display: block;
+	width: 15%;
+	height: 15px;
+	margin: 0 auto;
+	border: none;
+	cursor: pointer;
+}
+
+/* === LABELS STYLES === */
+#upper-text-input label,
+#lower-text-input label,
+#image-url-input label,
+#upper-font-family label,
+#lower-font-family label {
+	display: block;
+}
+
+/* === MEME IMG STYLES === */
 #user-image-text {
 	position: relative;
 }
@@ -53,6 +109,9 @@ img {
 	top: 0;
 	left: 0;
 	right: 0;
+	width: 40%;
+	word-wrap: break-word;
+	margin: 0 auto;
 }
 
 #lower-text-span {
@@ -60,4 +119,11 @@ img {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	width: 40%;
+	word-wrap: break-word;
+	margin: 0 auto;
+}
+
+#user-image-text img {
+	height: 22vh;
 }
