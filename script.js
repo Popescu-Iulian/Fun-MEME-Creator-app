@@ -45,21 +45,29 @@ function selectedUpperFontColor() {
   UPPER_TEXT_SPAN.style.color = USER_UPPER_TEXT_COLOR.value;
 }
 
-function resetUpperSettings(event) {
-  UPPER_TEXT_SPAN.textContent = '';
-  UPPER_TEXT_SPAN.style.fontFamily = 'initial';
-  UPPER_TEXT_SPAN.style.fontSize = 'initial';
-  // document.querySelector('[name="user-upper-font-family"]').checked = false; -- va da mereu pe primul din lista; poate facem un for pe undeva -- ramane de gandit si rezolvat
-  UPPER_TEXT_SPAN.style.color = 'initial';
-  USER_UPPER_TEXT_COLOR.value = 'initial';
-  USER_UPPER_FONT_SIZE.value = 'initial';
-  USER_UPPER_FONT_FAMILY.value = 'initial';
-  // location.reload();
+function resetUpperSettings() {
+  if (confirm('Do you want to reset all upper text settings?')) {
+    UPPER_TEXT_SPAN.textContent = '';
+    UPPER_TEXT_SPAN.style.fontFamily = 'initial';
+    UPPER_TEXT_SPAN.style.fontSize = 'initial';
+    UPPER_TEXT_SPAN.style.color = 'initial';
+    USER_UPPER_TEXT_COLOR.value = 'initial';
+    USER_UPPER_FONT_SIZE.value = 'initial';
+    USER_UPPER_FONT_FAMILY.value = 'initial';
+  }
 }
 
 // USER IMAGE INPUT/GEN FUNCTIONS
 function addImage() {
   return USER_IMAGE_URL.value.length === 0 ? alert('Please add an image') : USER_MEME_IMAGE.setAttribute('src', USER_IMAGE_URL.value), USER_IMAGE_URL.value = '';
+}
+
+function delImage() {
+  if (USER_MEME_IMAGE.hasAttribute('src')) {
+    if (confirm('Do you want to remove image?')) {
+      USER_MEME_IMAGE.removeAttribute('src');
+    }
+  }
 }
 
 // USER LOWER/RIGHT FUNCTIONS
@@ -87,13 +95,13 @@ function selectedLowerFontColor() {
 }
 
 function resetLowerSettings() {
-  LOWER_TEXT_SPAN.textContent = '';
-  LOWER_TEXT_SPAN.style.fontFamily = 'initial';
-  LOWER_TEXT_SPAN.style.fontSize = 'initial';
-  // document.querySelector('[name="user-lower-font-family"]').checked = false; -- va da mereu pe primul din lista; poate facem un for pe undeva -- ramane de gandit si rezolvat
-  LOWER_TEXT_SPAN.style.color = 'initial';
-  USER_LOWER_TEXT_COLOR.value = 'initial';
-  USER_LOWER_FONT_FAMILY.value = 'initial';
-  USER_LOWER_FONT_SIZE.value = 'initial';
-  // location.reload();
+  if (confirm('Do you want to reset all lower text settings?')) {
+    LOWER_TEXT_SPAN.textContent = '';
+    LOWER_TEXT_SPAN.style.fontFamily = 'initial';
+    LOWER_TEXT_SPAN.style.fontSize = 'initial';
+    LOWER_TEXT_SPAN.style.color = 'initial';
+    USER_LOWER_TEXT_COLOR.value = 'initial';
+    USER_LOWER_FONT_FAMILY.value = 'initial';
+    USER_LOWER_FONT_SIZE.value = 'initial';
+  }
 }
