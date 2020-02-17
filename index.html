@@ -9,21 +9,20 @@
 	</head>
 	<body>
 		<div id="container">
-			<div id="app-title">
+			<section id="app-title">
 				<h1>Fun MEME creator</h1>
-			</div>
+			</section>
 
 			<!-- USER UPPER/LEFT SETTINGS -->
 
 			<section id="upper-left-settings">
 				<div id="upper-text-input">
-					<label
-						>Enter upper text:
-						<input
-							id="user-upper-text"
-							type="text"
-							placeholder="your text here..."
-					/></label>
+					<label for="user-upper-text">Enter meme upper text: </label>
+					<input
+						id="user-upper-text"
+						type="text"
+						placeholder="your text here..."
+					/>
 					<button type="button" onclick="addUpperText()">Add</button>
 					<button type="button" onclick="editUpperText()">Edit</button>
 				</div>
@@ -56,7 +55,7 @@
 
 				<div id="upper-font-color">
 					<label
-						>Set upper text color:
+						>Set upper text font color:
 						<input
 							id="user-upper-text-color"
 							type="color"
@@ -73,16 +72,16 @@
 
 			<!-- USER IMAGE INPUT/GENERATOR -->
 
-			<div id="image-settings">
+			<section id="image-settings">
 				<div id="image-url-input">
-					<label
-						>Enter image URL:
-						<input
-							id="user-image-url"
-							type="url"
-							placeholder="example.com/img.jpg"
-					/></label>
+					<label for="user-image-url">Enter image URL: </label>
+					<input
+						id="user-image-url"
+						type="url"
+						placeholder="example.com/img.jpg"
+					/>
 					<button type="button" onclick="addImage()">Add</button>
+					<button type="button" onclick="delImage()">Del</button>
 				</div>
 
 				<div id="user-image-text">
@@ -90,19 +89,18 @@
 					<img id="user-meme-image" />
 					<span id="lower-text-span"></span>
 				</div>
-			</div>
+			</section>
 
 			<!-- USER LOWER/RIGHT SETTINGS -->
 
 			<section id="lower-right-settings">
 				<div id="lower-text-input">
-					<label
-						>Enter lower text:
-						<input
-							id="user-lower-text"
-							type="text"
-							placeholder="your text here..."
-					/></label>
+					<label for="user-lower-text">Enter meme lower text: </label>
+					<input
+						id="user-lower-text"
+						type="text"
+						placeholder="your text here..."
+					/>
 					<button type="button" onclick="addLowerText()">Add</button>
 					<button type="button" onclick="editLowerText()">Edit</button>
 				</div>
@@ -135,7 +133,7 @@
 
 				<div id="lower-font-color">
 					<label
-						>Set lower text color:
+						>Set lower text font color:
 						<input
 							id="user-lower-text-color"
 							type="color"
