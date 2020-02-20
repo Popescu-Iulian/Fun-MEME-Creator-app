@@ -105,3 +105,5 @@ function resetLowerSettings() {
     USER_LOWER_FONT_SIZE.value = 'initial';
   }
 }
+
+// window.getComputedStyle($0).width - for uploaded picture width
